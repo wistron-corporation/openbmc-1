@@ -19,7 +19,7 @@ sudo dnf groupinstall "C Development Tools and Libraries"
 ```
 ### 2) Download the source
 ```
-git clone git@github.com:openbmc/openbmc.git
+git clone -b Wistron-OP940 https://github.com/wistron-corporation/openbmc-1.git
 cd openbmc
 ```
 
