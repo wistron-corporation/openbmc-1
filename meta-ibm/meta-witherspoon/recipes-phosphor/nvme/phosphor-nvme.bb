@@ -19,7 +19,7 @@ DEPENDS += "nlohmann-json"
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
 SRC_URI := "git://github.com/wistron-corporation/phosphor-nvme.git;protocol=git"
-SRCREV := "${AUTOREV}"
+SRCREV := "c2cd193714f7f41f38a44c1ace264d8fece11586"
 S = "${WORKDIR}/git"
 
 DBUS_SERVICE_${PN} = "xyz.openbmc_project.nvme.manager.service"
