@@ -1,4 +1,4 @@
-# OpenBMC
+# Wistron OpenBMC
 
 
 ## Setting up your OpenBMC project
