@@ -125,7 +125,16 @@
   watch: property
   paths: core sensors
   properties: core temp
-  callback: check temps
+  callback: check temps and defer
+
+- name: check temps and defer
+  description: >
+    'Shut the system down according to the temp'
+  class: callback
+  callback: group
+  members:
+    - check temps
+    - defer
 
 - name: check temps
   description: >
@@ -139,8 +148,23 @@
   countop: '>='
   countbound: 3
   op: '>='
-  bound: 115000
+  bound: 95000
   oneshot: true
+
+- name: defer
+  description: >
+    'If this condition passes at least three cores are running
+    too hot.  Defer 10s to shut the system down.'
+  class: condition
+  condition: count
+  paths: core sensors
+  properties: core temp
+  defer: 60000000us
+  callback: log and shutdown
+  countop: '>='
+  countbound: 3
+  op: '>='
+  bound: 90000
 
 - name: log and shutdown
   description: >
