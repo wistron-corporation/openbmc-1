@@ -167,7 +167,7 @@
   countop: '>='
   countbound: 1
   op: '>='
-  bound: 35000
+  bound: 45000
   oneshot: true
 
 - name: check temps and defer
