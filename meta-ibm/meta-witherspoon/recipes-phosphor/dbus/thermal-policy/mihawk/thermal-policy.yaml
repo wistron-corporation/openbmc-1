@@ -107,6 +107,15 @@
     - meta: SENSOR
       path: /xyz/openbmc_project/sensors/temperature/p1_core23_temp
 
+- name: ambient sensor
+  description: >
+    'The machine has one ambient temperature sensors.'
+  class: group
+  group: path
+  members:
+    - meta: SENSOR
+      path: /xyz/openbmc_project/sensors/temperature/ambient_temp
+
 - name: core temp
   description: >
     'Monitor the temperature of each core.'
@@ -126,6 +135,40 @@
   paths: core sensors
   properties: core temp
   callback: check temps and defer
+
+- name: ambient temp
+  description: >
+    'Monitor the ambient temperature.'
+  class: group
+  group: property
+  type: int64
+  members:
+    - interface: xyz.openbmc_project.Sensor.Value
+      meta: TEMP
+      property: Value
+
+- name: watch ambient temp
+  description: >
+    'Trigger logic on ambient temp changes.'
+  class: watch
+  watch: property
+  paths: ambient sensor
+  properties: ambient temp
+  callback: check ambient temp
+
+- name: check ambient temp
+  description: >
+    'If the ambient sensor is too hot. Shut the system down.'
+  class: condition
+  condition: count
+  paths: ambient sensor
+  properties: ambient temp
+  callback: ambient log and shutdown
+  countop: '>='
+  countbound: 1
+  op: '>='
+  bound: 35000
+  oneshot: true
 
 - name: check temps and defer
   description: >
@@ -176,6 +219,16 @@
     - create criticalhigh error
     - create shutdown error
 
+- name: ambient log and shutdown
+  description: >
+    'Shut the system down and log an event.'
+  class: callback
+  callback: group
+  members:
+    - shutdown
+    - create ambient criticalhigh error
+    - create ambient shutdown error
+
 - name: shutdown
   description: >
     'Shut down the system.'
@@ -201,6 +254,16 @@
   error: xyz::openbmc_project::Sensor::Threshold::Error::CriticalHigh
   metadata: xyz::openbmc_project::Sensor::Threshold::CriticalHigh::SENSOR_DATA
 
+- name: create ambient criticalhigh error
+  description: >
+    'Create a Ambient CriticalHigh Error log.'
+  class: callback
+  callback: elog_with_metadata
+  paths: ambient sensor
+  properties: ambient temp
+  error: xyz::openbmc_project::Sensor::Threshold::Error::CriticalHigh
+  metadata: xyz::openbmc_project::Sensor::Threshold::CriticalHigh::SENSOR_DATA  
+
 - name: create shutdown error
   description: >
     'Create a SystemShutdown Error log.'
@@ -209,3 +272,12 @@
   paths: core sensors
   properties: core temp
   error: xyz::openbmc_project::State::Shutdown::ThermalEvent::Error::Processor
+
+- name: create ambient shutdown error
+  description: >
+    'Create a SystemShutdown Error log.'
+  class: callback
+  callback: elog
+  paths: ambient sensor
+  properties: ambient temp
+  error: xyz::openbmc_project::State::Shutdown::ThermalEvent::Error::Ambient
