@@ -106,7 +106,7 @@
 
 - name: gpu sensors
   description: >
-    'The machine has gpu temperature sensors.'
+    'Each gpu has its own temperature sensor.'
   class: group
   group: path
   members:
@@ -174,7 +174,7 @@
   watch: property
   paths: gpu sensors
   properties: gpu temp
-  callback: check gpu sensors ready
+  callback: check gpu temps
 
 - name: ambient temp
   description: >
@@ -196,22 +196,9 @@
   properties: ambient temp
   callback: check ambient temp
 
-- name: check gpu sensors ready
-  description: >
-    'Check gpu sensors are ready.'
-  class: condition
-  condition: count
-  paths: gpu sensors
-  properties: gpu temp
-  callback: check gpu temps
-  countop: '>='
-  countbound: 1
-  op: '<'
-  bound: 255
-
 - name: check gpu temps
   description: >
-    'If the gpu sensor is too hot. Shut the system down.'
+    'If the gpu temperature sensor is too hot. Shut the system down.'
   class: condition
   condition: count
   paths: gpu sensors
@@ -264,7 +251,7 @@
 - name: defer
   description: >
     'If this condition passes at least three cores are running
-    too hot.  Defer 10s to shut the system down.'
+    too hot.  Defer 60s to shut the system down.'
   class: condition
   condition: count
   paths: core sensors
@@ -333,7 +320,7 @@
 
 - name: create gpu criticalhigh error
   description: >
-    'Create a CriticalHigh Error log.'
+    'Create a GPU CriticalHigh Error log.'
   class: callback
   callback: elog_with_metadata
   paths: gpu sensors
