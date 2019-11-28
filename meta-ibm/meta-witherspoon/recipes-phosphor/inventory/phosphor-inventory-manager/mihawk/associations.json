@@ -16,11 +16,7 @@
                     "/xyz/openbmc_project/sensors/current/ps0_output_current",
                     "/xyz/openbmc_project/sensors/voltage/ps0_output_voltage"
                 ]
-<<<<<<< HEAD
             }
-=======
-            },
->>>>>>> 4e75532a405643bad5593e8114fd4ae9406f477e
         ]
     },
     {
@@ -40,11 +36,7 @@
                     "/xyz/openbmc_project/sensors/current/ps1_output_current",
                     "/xyz/openbmc_project/sensors/voltage/ps1_output_voltage"
                 ]
-<<<<<<< HEAD
             }
-=======
-            },
->>>>>>> 4e75532a405643bad5593e8114fd4ae9406f477e
         ]
     },
     {
@@ -1647,11 +1639,7 @@
 
                     "/xyz/openbmc_project/sensors/temperature/ambient_temp",
                     "/xyz/openbmc_project/sensors/temperature/p0_pcie_temp",
-<<<<<<< HEAD
                     "/xyz/openbmc_project/sensors/temperature/p1_pcie_temp",
-=======
-                    "/xyz/openbmc_project/sensors/temperature/p1_pcie_temp"
->>>>>>> 4e75532a405643bad5593e8114fd4ae9406f477e
 
                     "/xyz/openbmc_project/sensors/temperature/gpu0",
                     "/xyz/openbmc_project/sensors/temperature/gpu1",
@@ -1759,11 +1747,7 @@
                     "/xyz/openbmc_project/sensors/power/p1_vdd_power",
                     "/xyz/openbmc_project/sensors/power/fans_power",
                     "/xyz/openbmc_project/sensors/power/storage_a_power",
-<<<<<<< HEAD
                     "/xyz/openbmc_project/sensors/power/storage_b_power",
-=======
-                    "/xyz/openbmc_project/sensors/power/storage_b_power"
->>>>>>> 4e75532a405643bad5593e8114fd4ae9406f477e
 
                     "/xyz/openbmc_project/sensors/voltage/ps0_input_voltage",
                     "/xyz/openbmc_project/sensors/voltage/ps0_output_voltage",
