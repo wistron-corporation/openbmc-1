@@ -1,0 +1,206 @@
+{
+    "config": [
+        {
+            "NVMeDriveIndex": 0,
+            "NVMeDriveBusID": 6,
+            "NVMeAddress": 112,
+            "NVMeChannel": 1,
+            "NVMeDrivePresentPin": 307,
+            "NVMeDrivePwrGoodPin": 330
+        },
+        {
+            "NVMeDriveIndex": 1,
+            "NVMeDriveBusID": 6,
+            "NVMeAddress": 112,
+            "NVMeChannel": 2,
+            "NVMeDrivePresentPin": 307,
+            "NVMeDrivePwrGoodPin": 330
+        },
+        {
+            "NVMeDriveIndex": 2,
+            "NVMeDriveBusID": 6,
+            "NVMeAddress": 112,
+            "NVMeChannel": 4,
+            "NVMeDrivePresentPin": 307,
+            "NVMeDrivePwrGoodPin": 330
+        },
+        {
+            "NVMeDriveIndex": 3,
+            "NVMeDriveBusID": 6,
+            "NVMeAddress": 112,
+            "NVMeChannel": 8,
+            "NVMeDrivePresentPin": 307,
+            "NVMeDrivePwrGoodPin": 330
+        },
+        {
+            "NVMeDriveIndex": 4,
+            "NVMeDriveBusID": 6,
+            "NVMeAddress": 112,
+            "NVMeChannel": 16,
+            "NVMeDrivePresentPin": 307,
+            "NVMeDrivePwrGoodPin": 330
+        },
+        {
+            "NVMeDriveIndex": 5,
+            "NVMeDriveBusID": 6,
+            "NVMeAddress": 112,
+            "NVMeChannel": 32,
+            "NVMeDrivePresentPin": 307,
+            "NVMeDrivePwrGoodPin": 330
+        },
+        {
+            "NVMeDriveIndex": 6,
+            "NVMeDriveBusID": 6,
+            "NVMeAddress": 112,
+            "NVMeChannel": 64,
+            "NVMeDrivePresentPin": 307,
+            "NVMeDrivePwrGoodPin": 330
+        },
+        {
+            "NVMeDriveIndex": 7,
+            "NVMeDriveBusID": 6,
+            "NVMeAddress": 112,
+            "NVMeChannel": 128,
+            "NVMeDrivePresentPin": 307,
+            "NVMeDrivePwrGoodPin": 330
+        },
+        {
+            "NVMeDriveIndex": 8,
+            "NVMeDriveBusID": 7,
+            "NVMeAddress": 112,
+            "NVMeChannel": 1,
+            "NVMeDrivePresentPin": 307,
+            "NVMeDrivePwrGoodPin": 330
+        },
+        {
+            "NVMeDriveIndex": 9,
+            "NVMeDriveBusID": 7,
+            "NVMeAddress": 112,
+            "NVMeChannel": 2,
+            "NVMeDrivePresentPin": 307,
+            "NVMeDrivePwrGoodPin": 330
+        },
+        {
+            "NVMeDriveIndex": 10,
+            "NVMeDriveBusID": 7,
+            "NVMeAddress": 112,
+            "NVMeChannel": 4,
+            "NVMeDrivePresentPin": 307,
+            "NVMeDrivePwrGoodPin": 330
+        },
+        {
+            "NVMeDriveIndex": 11,
+            "NVMeDriveBusID": 7,
+            "NVMeAddress": 112,
+            "NVMeChannel": 8,
+            "NVMeDrivePresentPin": 307,
+            "NVMeDrivePwrGoodPin": 330
+        },
+        {
+            "NVMeDriveIndex": 12,
+            "NVMeDriveBusID": 7,
+            "NVMeAddress": 112,
+            "NVMeChannel": 16,
+            "NVMeDrivePresentPin": 307,
+            "NVMeDrivePwrGoodPin": 330
+        },
+        {
+            "NVMeDriveIndex": 13,
+            "NVMeDriveBusID": 7,
+            "NVMeAddress": 112,
+            "NVMeChannel": 32,
+            "NVMeDrivePresentPin": 307,
+            "NVMeDrivePwrGoodPin": 330
+        },
+        {
+            "NVMeDriveIndex": 14,
+            "NVMeDriveBusID": 7,
+            "NVMeAddress": 112,
+            "NVMeChannel": 64,
+            "NVMeDrivePresentPin": 307,
+            "NVMeDrivePwrGoodPin": 330
+        },
+        {
+            "NVMeDriveIndex": 15,
+            "NVMeDriveBusID": 7,
+            "NVMeAddress": 112,
+            "NVMeChannel": 128,
+            "NVMeDrivePresentPin": 307,
+            "NVMeDrivePwrGoodPin": 330
+        },
+        {
+            "NVMeDriveIndex": 16,
+            "NVMeDriveBusID": 13,
+            "NVMeAddress": 112,
+            "NVMeChannel": 1,
+            "NVMeDrivePresentPin": 307,
+            "NVMeDrivePwrGoodPin": 330
+        },
+        {
+            "NVMeDriveIndex": 17,
+            "NVMeDriveBusID": 13,
+            "NVMeAddress": 112,
+            "NVMeChannel": 2,
+            "NVMeDrivePresentPin": 307,
+            "NVMeDrivePwrGoodPin": 330
+        },
+        {
+            "NVMeDriveIndex": 18,
+            "NVMeDriveBusID": 13,
+            "NVMeAddress": 112,
+            "NVMeChannel": 4,
+            "NVMeDrivePresentPin": 307,
+            "NVMeDrivePwrGoodPin": 330
+        },
+        {
+            "NVMeDriveIndex": 19,
+            "NVMeDriveBusID": 13,
+            "NVMeAddress": 112,
+            "NVMeChannel": 8,
+            "NVMeDrivePresentPin": 307,
+            "NVMeDrivePwrGoodPin": 330
+        },
+        {
+            "NVMeDriveIndex": 20,
+            "NVMeDriveBusID": 13,
+            "NVMeAddress": 112,
+            "NVMeChannel": 16,
+            "NVMeDrivePresentPin": 307,
+            "NVMeDrivePwrGoodPin": 330
+        },
+        {
+            "NVMeDriveIndex": 21,
+            "NVMeDriveBusID": 13,
+            "NVMeAddress": 112,
+            "NVMeChannel": 32,
+            "NVMeDrivePresentPin": 307,
+            "NVMeDrivePwrGoodPin": 330
+        },
+        {
+            "NVMeDriveIndex": 22,
+            "NVMeDriveBusID": 13,
+            "NVMeAddress": 112,
+            "NVMeChannel": 64,
+            "NVMeDrivePresentPin": 307,
+            "NVMeDrivePwrGoodPin": 330
+        },
+        {
+            "NVMeDriveIndex": 23,
+            "NVMeDriveBusID": 13,
+            "NVMeAddress": 112,
+            "NVMeChannel": 128,
+            "NVMeDrivePresentPin": 307,
+            "NVMeDrivePwrGoodPin": 330
+        }
+    ],
+    "threshold": [
+        {
+            "criticalHigh": 60,
+            "criticalLow": 0,
+            "warningHigh": 60,
+            "warningLow": 0,
+            "maxValue": 127,
+            "minValue": -128
+        }
+    ]
+}

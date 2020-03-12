@@ -18,9 +18,12 @@ DEPENDS += "nlohmann-json"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
-SRC_URI := "git://github.com/wistron-corporation/phosphor-nvme"
+EXTRA_OEMESON_append_mihawk += "-Dplatform=mihawk"
+
+SRC_URI := "git://github.com/wistron-corporation/phosphor-nvme;branch=test1"
 SRCREV := "6682f07c169d8d83786c72b4a1ef3a1a64c57236"
 S = "${WORKDIR}/git"
 
-DBUS_SERVICE_${PN} = "xyz.openbmc_project.nvme.manager.service"
+SRC_URI += " file://mihawk_config.json;subdir=git"
 
+DBUS_SERVICE_${PN} = "xyz.openbmc_project.nvme.manager.service"
