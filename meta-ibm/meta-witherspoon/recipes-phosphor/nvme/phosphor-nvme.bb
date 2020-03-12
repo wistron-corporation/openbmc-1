@@ -21,7 +21,7 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 EXTRA_OEMESON_append_mihawk += "-Dplatform=mihawk"
 
 SRC_URI := "git://github.com/wistron-corporation/phosphor-nvme;branch=test1"
-SRCREV := "6682f07c169d8d83786c72b4a1ef3a1a64c57236"
+SRCREV := "1f0c442459676d99ad6da810ac22476ee7025116"
 S = "${WORKDIR}/git"
 
 SRC_URI += " file://mihawk_config.json;subdir=git"
