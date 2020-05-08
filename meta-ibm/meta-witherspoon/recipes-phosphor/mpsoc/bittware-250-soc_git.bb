@@ -2,6 +2,7 @@ SUMMARY = "Bittware 250 SoC "
 DESCRIPTION = "This module creates inventory and sensor of Bittware 250 SoC"
 
 inherit meson pkgconfig
+inherit obmc-phosphor-dbus-service
 
 DEPENDS += "phosphor-logging"
 DEPENDS += "sdbusplus"
@@ -16,3 +17,5 @@ SRC_URI += "git://github.com/wistron-corporation/bittware-soc.git;protocol=git"
 SRCREV = "243c8b830c4cdaf48d54c9054e0e7be1b6d5a6d7"
 
 S = "${WORKDIR}/git"
+
+DBUS_SERVICE_${PN} = "xyz.openbmc_project.bittware.manager.service"
