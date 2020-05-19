@@ -1,0 +1,14 @@
+[Unit]
+Description=Bittware management
+Wants=op-power-start@0.target
+After=op-power-start@0.target
+Conflicts=obmc-chassis-poweroff@0.target
+
+[Service]
+ExecStart=/usr/bin/bittware-250-soc
+Type=dbus
+BusName=xyz.openbmc_project.bittware.manager
+SyslogIdentifier=bittware-soc
+
+[Install]
+WantedBy=obmc-chassis-poweron@0.target
