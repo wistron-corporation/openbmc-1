@@ -1,6 +1,6 @@
 #!/bin/bash
 # #########################################################
-# Script to run on mihawk BMC to unbind/bind the ir35221
+# Script to run on mowgli BMC to unbind/bind the ir35221
 # driver's devices
 
 status=0
@@ -36,46 +36,27 @@ bind_driver () {
 
 if [ "$1" = "unbind" ]
 then
-    if [ -e $driver_path/4-0070 ]
+    if [ -e $driver_path/4-0031 ]
     then
-        unbind_driver "4-0070"
+        unbind_driver "4-0030"
     fi
 
-    if [ -e $driver_path/4-0072 ]
+    if [ -e $driver_path/4-0031 ]
     then
-        unbind_driver "4-0072"
-    fi
-
-    if [ -e $driver_path/5-0070 ]
-    then
-        unbind_driver "5-0070"
-    fi
-
-    if [ -e $driver_path/5-0072 ]
-    then
-        unbind_driver "5-0072"
+        unbind_driver "4-0031"
     fi
 elif [ "$1" = "bind" ]
 then
-    if [ -e $platform_path/1e78a140.i2c-bus/i2c-4/4-0070 ]
+    if [ -e $platform_path/1e78a140.i2c-bus/i2c-4/4-0030 ]
     then
-        bind_driver "4-0070"
+        bind_driver "4-0030"
     fi
 
-    if [ -e $platform_path/1e78a140.i2c-bus/i2c-4/4-0072 ]
+    if [ -e $platform_path/1e78a140.i2c-bus/i2c-4/4-0031 ]
     then
-        bind_driver "4-0072"
+        bind_driver "4-0031"
     fi
 
-    if [ -e $platform_path/1e78a180.i2c-bus/i2c-5/5-0070 ]
-    then
-        bind_driver "5-0070"
-    fi
-
-    if [ -e $platform_path/1e78a180.i2c-bus/i2c-5/5-0072 ]
-    then
-        bind_driver "5-0072"
-    fi
 fi
 
 exit $status
