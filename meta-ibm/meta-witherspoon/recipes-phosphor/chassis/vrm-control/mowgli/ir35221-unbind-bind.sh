@@ -36,7 +36,7 @@ bind_driver () {
 
 if [ "$1" = "unbind" ]
 then
-    if [ -e $driver_path/4-0031 ]
+    if [ -e $driver_path/4-0030 ]
     then
         unbind_driver "4-0030"
     fi
