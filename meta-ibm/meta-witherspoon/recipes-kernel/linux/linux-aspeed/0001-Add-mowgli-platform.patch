@@ -1,6 +1,6 @@
-From 2d39825cab5a5aa92b075535fdeb6aa8aba03729 Mon Sep 17 00:00:00 2001
+From baa97e766d7ea9dd0908c7f7ef4229e0ce3cbcc8 Mon Sep 17 00:00:00 2001
 From: Ben Pai <Ben_Pai@wistron.com>
-Date: Tue, 23 Jun 2020 13:15:58 +0800
+Date: Mon, 3 Aug 2020 10:17:49 +0800
 Subject: [PATCH] Add mowgli platform
 
 ---
@@ -23,7 +23,7 @@ index 3ad9706..854578b 100644
  	aspeed-bmc-opp-swift.dtb \
 diff --git a/arch/arm/boot/dts/aspeed-bmc-opp-mowgli.dts b/arch/arm/boot/dts/aspeed-bmc-opp-mowgli.dts
 new file mode 100644
-index 0000000..aa702bd
+index 0000000..ab66034
 --- /dev/null
 +++ b/arch/arm/boot/dts/aspeed-bmc-opp-mowgli.dts
 @@ -0,0 +1,612 @@
@@ -200,9 +200,9 @@ index 0000000..aa702bd
 +
 +		clock-gpios = <&gpio ASPEED_GPIO(E, 6) GPIO_ACTIVE_HIGH>;
 +		data-gpios = <&gpio ASPEED_GPIO(E, 7) GPIO_ACTIVE_HIGH>;
-+		mux-gpios = <&gpio ASPEED_GPIO(E, 5) GPIO_ACTIVE_HIGH>;
++		mux-gpios = <&gpio ASPEED_GPIO(R, 2) GPIO_ACTIVE_HIGH>;
 +		enable-gpios = <&gpio ASPEED_GPIO(D, 0) GPIO_ACTIVE_HIGH>;
-+		trans-gpios = <&gpio ASPEED_GPIO(R, 2) GPIO_ACTIVE_HIGH>;
++		trans-gpios = <&gpio ASPEED_GPIO(E, 5) GPIO_ACTIVE_HIGH>;
 +	};
 +};
 +
