@@ -1,6 +1,6 @@
-From 0c6df9017020a547afee503608e50517c22d6d5a Mon Sep 17 00:00:00 2001
+From 17a946911a95f0b35fee2b400316ebefcd982999 Mon Sep 17 00:00:00 2001
 From: Ben Pai <Ben_Pai@wistron.com>
-Date: Sat, 22 Aug 2020 12:36:07 +0800
+Date: Sat, 22 Aug 2020 16:39:16 +0800
 Subject: [PATCH] Add mowgli platform
 
 ---
@@ -23,7 +23,7 @@ index 3ad9706..854578b 100644
  	aspeed-bmc-opp-swift.dtb \
 diff --git a/arch/arm/boot/dts/aspeed-bmc-opp-mowgli.dts b/arch/arm/boot/dts/aspeed-bmc-opp-mowgli.dts
 new file mode 100644
-index 0000000..5d82c1f
+index 0000000..1cd50e0
 --- /dev/null
 +++ b/arch/arm/boot/dts/aspeed-bmc-opp-mowgli.dts
 @@ -0,0 +1,612 @@
@@ -158,7 +158,7 @@ index 0000000..5d82c1f
 +		front-id {
 +			retain-state-shutdown;
 +			default-state = "keep";
-+			gpios = <&gpio ASPEED_GPIO(AA, 2) GPIO_ACTIVE_LOW>;
++			gpios = <&gpio ASPEED_GPIO(AA, 2) GPIO_ACTIVE_HIGH>;
 +		};
 +
 +		fan0 {
