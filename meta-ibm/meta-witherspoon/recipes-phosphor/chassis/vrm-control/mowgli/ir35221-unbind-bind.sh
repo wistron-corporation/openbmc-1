@@ -36,25 +36,25 @@ bind_driver () {
 
 if [ "$1" = "unbind" ]
 then
-    if [ -e $driver_path/4-0030 ]
+    if [ -e $driver_path/4-0028 ]
     then
-        unbind_driver "4-0030"
+        unbind_driver "4-0028"
     fi
 
-    if [ -e $driver_path/4-0031 ]
+    if [ -e $driver_path/4-0029 ]
     then
-        unbind_driver "4-0031"
+        unbind_driver "4-0029"
     fi
 elif [ "$1" = "bind" ]
 then
-    if [ -e $platform_path/1e78a140.i2c-bus/i2c-4/4-0030 ]
+    if [ -e $platform_path/1e78a140.i2c-bus/i2c-4/4-0028 ]
     then
-        bind_driver "4-0030"
+        bind_driver "4-0028"
     fi
 
-    if [ -e $platform_path/1e78a140.i2c-bus/i2c-4/4-0031 ]
+    if [ -e $platform_path/1e78a140.i2c-bus/i2c-4/4-0029 ]
     then
-        bind_driver "4-0031"
+        bind_driver "4-0029"
     fi
 
 fi

@@ -1,6 +1,6 @@
-From baa97e766d7ea9dd0908c7f7ef4229e0ce3cbcc8 Mon Sep 17 00:00:00 2001
+From 0c6df9017020a547afee503608e50517c22d6d5a Mon Sep 17 00:00:00 2001
 From: Ben Pai <Ben_Pai@wistron.com>
-Date: Mon, 3 Aug 2020 10:17:49 +0800
+Date: Sat, 22 Aug 2020 12:36:07 +0800
 Subject: [PATCH] Add mowgli platform
 
 ---
@@ -23,7 +23,7 @@ index 3ad9706..854578b 100644
  	aspeed-bmc-opp-swift.dtb \
 diff --git a/arch/arm/boot/dts/aspeed-bmc-opp-mowgli.dts b/arch/arm/boot/dts/aspeed-bmc-opp-mowgli.dts
 new file mode 100644
-index 0000000..ab66034
+index 0000000..5d82c1f
 --- /dev/null
 +++ b/arch/arm/boot/dts/aspeed-bmc-opp-mowgli.dts
 @@ -0,0 +1,612 @@
@@ -503,19 +503,19 @@ index 0000000..ab66034
 +	/* CP0 VDN & VIO : IR35221 */
 +	/* CP0 VDDR : IR35221 */
 +
-+	ir35221@30 {
++	ir35221@28 {
 +		compatible = "infineon,ir35221";
-+		reg = <0x30>;
++		reg = <0x28>;
 +	};
 +
-+	ir35221@31 {
++	ir35221@29 {
 +		compatible = "infineon,ir35221";
-+		reg = <0x31>;
++		reg = <0x29>;
 +	};
 +
-+	ir35221@32 {
++	ir35221@2d {
 +		compatible = "infineon,ir35221";
-+		reg = <0x32>;
++		reg = <0x2d>;
 +	};
 +
 +};
