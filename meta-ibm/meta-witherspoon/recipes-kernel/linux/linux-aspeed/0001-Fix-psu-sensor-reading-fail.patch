@@ -1,0 +1,25 @@
+From c0efd4f94db831c7cbed20f620c2c84da804be3b Mon Sep 17 00:00:00 2001
+From: AndyYFWang <Andy_YF_Wang@wistron.com>
+Date: Fri, 6 Nov 2020 11:06:15 +0800
+Subject: [PATCH] Fix psu sensor reading fail
+
+---
+ drivers/hwmon/pmbus/pmbus_core.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/drivers/hwmon/pmbus/pmbus_core.c b/drivers/hwmon/pmbus/pmbus_core.c
+index f7fc388..b66c5b7 100644
+--- a/drivers/hwmon/pmbus/pmbus_core.c
++++ b/drivers/hwmon/pmbus/pmbus_core.c
+@@ -2157,7 +2157,7 @@ static int pmbus_init_common(struct i2c_client *client, struct pmbus_data *data,
+ 
+ 	/* Enable PEC if the controller supports it */
+ 	ret = i2c_smbus_read_byte_data(client, PMBUS_CAPABILITY);
+-	if (ret >= 0 && (ret & PB_CAPABILITY_ERROR_CHECK))
++	if (ret >= 0 && (ret & PB_CAPABILITY_ERROR_CHECK) && ret != 0xff)
+ 		client->flags |= I2C_CLIENT_PEC;
+ 
+ 	if (data->info->pages)
+-- 
+2.7.4
+
