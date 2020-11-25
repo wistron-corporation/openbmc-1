@@ -301,7 +301,7 @@ events:
           - name: propertiesChanged
       actions:
           - name: count_state_before_speed
-            count: 1
+            count: 2
             property:
                 value: false
                 type: bool
@@ -429,17 +429,17 @@ events:
                           value: 1000
                           type: int64_t
                       delta:
-                          value: 13
+                          value: 8
                           type: uint64_t
                     - name: set_net_decrease_speed
                       property:
-                          value: 70000
+                          value: 72000
                           type: int64_t
                       factor:
-                          value: 1000
+                          value: 2000
                           type: int64_t
                       delta:
-                          value: 5
+                          value: 3
                           type: uint64_t
                 timer:
                     interval: 1
@@ -457,20 +457,20 @@ events:
                 actions:
                     - name: set_net_increase_speed
                       property:
-                          value: 80000
+                          value: 74000
                           type: int64_t
                       factor:
                           value: 1000
                           type: int64_t
                       delta:
-                          value: 8
+                          value: 7
                           type: uint64_t
                     - name: set_net_decrease_speed
                       property:
-                          value: 75000
+                          value: 71000
                           type: int64_t
                       factor:
-                          value: 1000
+                          value: 2000
                           type: int64_t
                       delta:
                           value: 3
@@ -533,23 +533,23 @@ events:
                 actions:
                     - name: set_net_increase_speed
                       property:
-                          value: 90000
-                          type: int64_t
-                      factor:
-                          value: 1000
-                          type: int64_t
-                      delta:
-                          value: 5
-                          type: uint64_t
-                    - name: set_net_decrease_speed
-                      property:
                           value: 85000
                           type: int64_t
                       factor:
                           value: 1000
                           type: int64_t
                       delta:
-                          value: 3
+                          value: 4
+                          type: uint64_t
+                    - name: set_net_decrease_speed
+                      property:
+                          value: 82000
+                          type: int64_t
+                      factor:
+                          value: 1000
+                          type: int64_t
+                      delta:
+                          value: 1
                           type: uint64_t
                 timer:
                     interval: 10
