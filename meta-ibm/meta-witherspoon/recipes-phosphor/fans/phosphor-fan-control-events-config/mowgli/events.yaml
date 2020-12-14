@@ -280,10 +280,6 @@ events:
     - name: missing_before_high_speed_air
       groups:
           - name: air_cooled_zone0_fans
-            zone_conditions:
-                - name: air_cooled_chassis
-                  zones:
-                      - 0
             interface: xyz.openbmc_project.Inventory.Item
             property:
                 name: Present
@@ -303,10 +299,6 @@ events:
     - name: fails_before_high_speed_air
       groups:
           - name: air_cooled_zone0_fans_rotors
-            zone_conditions:
-                - name: air_cooled_chassis
-                  zones:
-                      - 0
             interface: xyz.openbmc_project.State.Decorator.OperationalStatus
             property:
                 name: Functional
@@ -325,10 +317,6 @@ events:
     - name: set_air_cooled_speed_boundaries_based_on_ambient
       groups:
           - name: zone0_control_mode
-            zone_conditions:
-                - name: air_cooled_chassis
-                  zones:
-                      - 0
             interface: xyz.openbmc_project.Control.ThermalMode
             property:
                 name: Current
@@ -344,10 +332,6 @@ events:
                 - name: default_floor_boundary
                   groups:
                       - name: zone0_ambient
-                        zone_conditions:
-                            - name: air_cooled_chassis
-                              zones:
-                                  - 0
                         interface: xyz.openbmc_project.Sensor.Value
                         property:
                             name: Value
@@ -376,10 +360,6 @@ events:
                 - name: alternate_floor_boundary
                   groups:
                       - name: zone0_ambient
-                        zone_conditions:
-                            - name: air_cooled_chassis
-                              zones:
-                                  - 0
                         interface: xyz.openbmc_project.Sensor.Value
                         property:
                             name: Value
@@ -422,10 +402,6 @@ events:
               - name: speed_changes_based_on_core_temps
                 groups:
                     - name: zone0_cores
-                      zone_conditions:
-                          - name: air_cooled_chassis
-                            zones:
-                                - 0
                       interface: xyz.openbmc_project.Sensor.Value
                       property:
                           name: Value
@@ -494,10 +470,6 @@ events:
               - name: speed_changes_based_on_onboard_temps
                 groups:
                     - name: zone0_onboard
-                      zone_conditions:
-                          - name: air_cooled_chassis
-                            zones:
-                                - 0
                       interface: xyz.openbmc_project.Sensor.Value
                       property:
                           name: Value
@@ -532,10 +504,6 @@ events:
               - name: speed_changes_based_on_vrd_temps
                 groups:
                     - name: zone0_vrd
-                      zone_conditions:
-                          - name: air_cooled_chassis
-                            zones:
-                                - 0
                       interface: xyz.openbmc_project.Sensor.Value
                       property:
                           name: Value
