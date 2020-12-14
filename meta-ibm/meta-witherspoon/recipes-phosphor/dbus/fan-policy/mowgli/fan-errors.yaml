@@ -113,17 +113,6 @@
       meta: CHASSIS_STATE
       property: CurrentPowerState
 
-- name: chassis air cooled
-  description: >
-    'The chassis cooling type.'
-  class: group
-  group: property
-  type: boolean
-  members:
-    - interface: xyz.openbmc_project.Inventory.Decorator.CoolingType
-      meta: COOLING_TYPE
-      property: WaterCooled
-
 - name: watch chassis state
   description: >
     'Trigger logic on chassis power state changes.'
