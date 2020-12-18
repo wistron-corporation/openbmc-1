@@ -301,7 +301,7 @@
             Value:
                 Offsets:
                     255:
-                        type: double
+                        type: int64_t
     multiplierM: 2
     offsetB: 0
     path: /xyz/openbmc_project/sensors/power/fan_power
@@ -322,7 +322,7 @@
             Value:
                 Offsets:
                     255:
-                        type: double
+                        type: int64_t
     multiplierM: 2
     offsetB: 0
     path: /xyz/openbmc_project/sensors/power/storage_power
