@@ -23,7 +23,7 @@ do_install_append_mihawk() {
         install -D ${WORKDIR}/fan-errors.yaml ${D}${config_dir}/fan-errors.yaml
 }
 
-do_install_append_mowgli() {
+do_install_append_mowgli-server() {
         install -D ${WORKDIR}/air-cooled.yaml ${D}${config_dir}/air-cooled.yaml
         install -D ${WORKDIR}/fan-errors.yaml ${D}${config_dir}/fan-errors.yaml
 }

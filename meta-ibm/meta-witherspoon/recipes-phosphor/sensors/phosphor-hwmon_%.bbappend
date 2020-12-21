@@ -1,7 +1,7 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
 EXTRA_OECONF_append_mihawk = " --enable-negative-errno-on-fail"
-EXTRA_OECONF_append_mowgli = " --enable-negative-errno-on-fail"
+EXTRA_OECONF_append_mowgli-server = " --enable-negative-errno-on-fail"
 
 SRC_URI_append_ibm-ac-server = " \
            file://70-hwmon.rules \
@@ -59,7 +59,7 @@ CHIPS_mihawk = " \
                bus@1e78a000/i2c-bus@440/pca9545@70/i2c@3/tmp275@48 \
                "
 
-CHIPS_mowgli = " \
+CHIPS_mowgli-server = " \
                bus@1e78a000/i2c-bus@40/tmp275@48 \
                bus@1e78a000/i2c-bus@140/ir35221@28 \
                bus@1e78a000/i2c-bus@140/ir35221@29 \
@@ -87,22 +87,22 @@ ITEMS_append_mihawk += " iio-hwmon-12v.conf"
 ITEMS_append_mihawk += " iio-hwmon-5v.conf"
 ITEMS_append_mihawk += " iio-hwmon-3v.conf"
 ITEMS_append_mihawk += " iio-hwmon-battery.conf"
-ITEMS_append_mowgli += " iio-hwmon-vdd.conf"
-ITEMS_append_mowgli += " iio-hwmon-vcs.conf"
-ITEMS_append_mowgli += " iio-hwmon-vdn.conf"
-ITEMS_append_mowgli += " iio-hwmon-vio.conf"
-ITEMS_append_mowgli += " iio-hwmon-vddra.conf"
-ITEMS_append_mowgli += " iio-hwmon-vddrb.conf"
-ITEMS_append_mowgli += " iio-hwmon-12v.conf"
-ITEMS_append_mowgli += " iio-hwmon-5v.conf"
-ITEMS_append_mowgli += " iio-hwmon-3v.conf"
-ITEMS_append_mowgli += " iio-hwmon-battery.conf"
+ITEMS_append_mowgli-server += " iio-hwmon-vdd.conf"
+ITEMS_append_mowgli-server += " iio-hwmon-vcs.conf"
+ITEMS_append_mowgli-server += " iio-hwmon-vdn.conf"
+ITEMS_append_mowgli-server += " iio-hwmon-vio.conf"
+ITEMS_append_mowgli-server += " iio-hwmon-vddra.conf"
+ITEMS_append_mowgli-server += " iio-hwmon-vddrb.conf"
+ITEMS_append_mowgli-server += " iio-hwmon-12v.conf"
+ITEMS_append_mowgli-server += " iio-hwmon-5v.conf"
+ITEMS_append_mowgli-server += " iio-hwmon-3v.conf"
+ITEMS_append_mowgli-server += " iio-hwmon-battery.conf"
 
 OCCS = " \
         00--00--00--06/sbefifo1-dev0/occ-hwmon.1 \
         00--00--00--0a/fsi-master/fsi1/slave@01--00/01--01--00--06/sbefifo2-dev0/occ-hwmon.2 \
         "
-OCCS_mowgli = " \
+OCCS_mowgli-server = " \
         00--00--00--06/sbefifo1-dev0/occ-hwmon.1 \
         "
 OCCSFMT = "devices/platform/gpio-fsi/fsi-master/fsi0/slave@00--00/{0}.conf"
@@ -113,8 +113,8 @@ SYSTEMD_ENVIRONMENT_FILE_${PN}_append_ibm-ac-server = " ${@compose_list(d, 'ENVS
 SYSTEMD_ENVIRONMENT_FILE_${PN}_append_ibm-ac-server = " ${@compose_list(d, 'ENVS', 'OCCITEMS')}"
 SYSTEMD_ENVIRONMENT_FILE_${PN}_append_mihawk = " ${@compose_list(d, 'ENVS', 'ITEMS')}"
 SYSTEMD_ENVIRONMENT_FILE_${PN}_append_mihawk = " ${@compose_list(d, 'ENVS', 'OCCITEMS')}"
-SYSTEMD_ENVIRONMENT_FILE_${PN}_append_mowgli = " ${@compose_list(d, 'ENVS', 'ITEMS')}"
-SYSTEMD_ENVIRONMENT_FILE_${PN}_append_mowgli = " ${@compose_list(d, 'ENVS', 'OCCITEMS')}"
+SYSTEMD_ENVIRONMENT_FILE_${PN}_append_mowgli-server = " ${@compose_list(d, 'ENVS', 'ITEMS')}"
+SYSTEMD_ENVIRONMENT_FILE_${PN}_append_mowgli-server = " ${@compose_list(d, 'ENVS', 'OCCITEMS')}"
 
 SYSTEMD_ENVIRONMENT_FILE_max31785-msl_append_ibm-ac-server = " obmc/hwmon-max31785/max31785.conf"
 SYSTEMD_LINK_max31785-msl_append_ibm-ac-server = " ../phosphor-max31785-msl@.service:multi-user.target.wants/phosphor-max31785-msl@${MACHINE}.service"

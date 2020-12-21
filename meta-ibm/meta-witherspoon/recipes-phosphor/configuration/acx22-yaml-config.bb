@@ -26,7 +26,7 @@ SRC_URI_mihawk = " \
     file://acx22-ipmi-occ-sensors.yaml \
     file://acx22-ipmi-sensors-mrw.yaml \
     "
-SRC_URI_mowgli = " \
+SRC_URI_mowgli-server = " \
     file://acx22-ipmi-fru-bmc.yaml \
     file://acx22-ipmi-hwmon-sensors.yaml \
     file://acx22-ipmi-inventory-sensors.yaml \
@@ -48,7 +48,7 @@ ACx22_IPMI_EXTRA_FRU_READ_YAMLS_ibm-ac-server = " \
 ACx22_IPMI_EXTRA_FRU_READ_YAMLS_mihawk = " \
     acx22-ipmi-fru-bmc.yaml \
     "
-ACx22_IPMI_EXTRA_FRU_READ_YAMLS_mowgli = " \
+ACx22_IPMI_EXTRA_FRU_READ_YAMLS_mowgli-server = " \
     acx22-ipmi-fru-bmc.yaml \
     "
 ACx22_IPMI_EXTRA_MACHINE_SENSOR_YAMLS = ""
